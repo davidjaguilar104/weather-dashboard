@@ -47,6 +47,7 @@ var getLatLong = function(city) {
 var getCityWeather = function(data) {
     
     console.log(data); // see objects and properties to get lat and lon to pass into OpenWeather
+    console.log(data.results[0].geometry.location.lat);
 
     var cityLat = data.location[1].lat;
     
