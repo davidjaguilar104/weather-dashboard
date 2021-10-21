@@ -63,7 +63,9 @@ var getLatLong = function(city) {
 
 var getCityWeather = function(city) {
     
-    // might pass in lat and lon bases on variables from getCitySearched function, also remember exclue exists
+    
+    
+    // might pass in lat and lon bases on variables from getLatLong function, also remember exclue exists
     var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid=f41131e2a68abf0f2b5d80a0cda7823f"
 }
 
