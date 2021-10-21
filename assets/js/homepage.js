@@ -98,6 +98,12 @@ var displayCityWeather = function(data, city) {
     var cityUv = data.current.uvi;
     var dayUvEl = document.getElementById("day-uv");
     dayUvEl.textContent += cityUv; 
+
+    
+    var dayOneEl = document.getElementById("day-one");
+    var dayFromNow = moment().add(1, 'days').format("MM/D/YYYY");
+    dayOneEl.textContent = dayFromNow;
+
 }
 
 
