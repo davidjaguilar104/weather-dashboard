@@ -1,2 +1,4 @@
-1. Use google geocoding api to get lat and long of a city searched to later pass into function api url for OpenWeather api
-- need to extract the lat and long from the city searched and pass it into apiUrl 
+- need uv index color
+
+- need 5 day forecast 
+
