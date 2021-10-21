@@ -78,9 +78,8 @@ var displayCityWeather = function(data, city) {
     
 
 
-
-
-    cityNameEl.textContent += cityName + " " + iconUrl; 
+    const DATE = moment().format("(MM/D/YYYY)");
+    cityNameEl.textContent += cityName + " " + DATE + " " + iconUrl; 
 
 
 
