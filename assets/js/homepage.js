@@ -12,7 +12,7 @@ var formSubmitHandler = function(event) {
 
     if(citySearched) {
         getLatLong(citySearched);
-        cityInputEl.textContent = "";
+        cityInputEl.value = "";
     }
     else {
         alert("Please enter a city!");
@@ -57,10 +57,21 @@ var getCityWeather = function(data) {
     // might pass in lat and lon bases on variables from getLatLong function, also remember exclue exists
     var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + cityLat + "&lon=" + cityLon + "&exclude={part}&appid=f41131e2a68abf0f2b5d80a0cda7823f";
 
-    fetch(apiUrl);
+    fetch(apiUrl)
+    .then(function(response) {
+        if(response.ok) {
+            console.log(response);
+            response.json().then(function(data) {
+                console.log(data);
+                displayCityWeather(data);
+            })
+        }
+    })
 }
 
+var displayCityWeather = function(data) {
 
+}
 
 
 
