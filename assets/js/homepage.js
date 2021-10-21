@@ -24,7 +24,14 @@ var formSubmitHandler = function(event) {
 var getLatLong = function(city) {
     console.log(city)
 
-    var geocodingApiUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyDYEKHzP-co-gS0nRRcHFgcuLug8_L8WQ4"
+    var geocodingApiUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + city + "&key=AIzaSyDYEKHzP-co-gS0nRRcHFgcuLug8_L8WQ4";
+
+    fetch(geocodingApiUrl)
+    .then(function(response) {
+        if(response.ok) {
+            console.log(response);
+        }
+    })
 }
 
 
