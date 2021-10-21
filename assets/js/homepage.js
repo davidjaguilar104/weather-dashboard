@@ -29,8 +29,17 @@ var getLatLong = function(city) {
     fetch(geocodingApiUrl)
     .then(function(response) {
         if(response.ok) {
-            console.log(response);
+            console.log(response); // to see properties of the object and index of array
+            response.json().then(function(data) {
+                console.log(data); // to see data in JSON format
+                // displayCityWeather(data, city); use this later for the OpenWeather function
+            });
+        } else {
+            alert("Error: City Not Found.");
         }
+    })
+    .catch(function(error) {
+        alert("Unable to connect to weather service.")
     })
 }
 
