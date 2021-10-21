@@ -104,6 +104,22 @@ var displayCityWeather = function(data, city) {
     var dayFromNow = moment().add(1, 'days').format("MM/D/YYYY");
     dayOneEl.textContent = dayFromNow;
 
+    var dayTwoEl = document.getElementById("day-two");
+    var twoDaysFromNow = moment().add(2, 'days').format("MM/D/YYYY");
+    dayTwoEl.textContent = twoDaysFromNow;
+
+    var dayThreeEl = document.getElementById("day-three");
+    var threeDaysFromNow = moment().add(3, 'days').format("MM/D/YYYY");
+    dayThreeEl.textContent = threeDaysFromNow;
+
+    var dayFourEl = document.getElementById("day-four");
+    var fourDaysFromNow = moment().add(4, 'days').format("MM/D/YYYY");
+    dayFourEl.textContent = fourDaysFromNow;
+
+    var dayFiveEl = document.getElementById("day-five");
+    var fiveDaysFromNow = moment().add(5, 'days').format("MM/D/YYYY");
+    dayFiveEl.textContent = fiveDaysFromNow;
+
 }
 
 
