@@ -22,9 +22,12 @@
     <section class="row d-flex justify-content-between">
         <!-- search for a city column -->
         <div class="col col-md-3 d-flex flex-column">
-            <h2>Search for a city:</h2>
-            <input type="text" placeholder="Enter a city" />
-            <button type="submit">Search</button>
+            <form id="user-form">
+                <label for="city">Search for a City:</label>
+                <br />
+                <input type="text" id="city" placeholder="Enter a city" />
+                <button type="submit">Search</button>
+            </form>
 
             <!-- container for the site history that is created dynamically to append to -->
             <div class="" id="search-history">
