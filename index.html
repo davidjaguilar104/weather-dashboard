@@ -18,22 +18,44 @@
     </header>
 
 
-<!-- search for city and history section -->
-    <section class="row d-flex">
+<!-- search for city and history main content -->
+    <section class="row d-flex justify-content-between">
         <!-- search for a city column -->
         <div class="col col-md-3 d-flex flex-column">
-
             <h2>Search for a city:</h2>
-            
             <input type="text" placeholder="Enter a city" />
             <button type="submit">Search</button>
 
             <!-- container for the site history that is created dynamically to append to -->
-            <div id="search-history">
-
+            <div class="" id="search-history">
+                
             </div>
 
         </div>
+
+
+        <!-- column holding two rows (weather and forecast) -->
+        <div class="col col-md-9 d-flex flex-column justify-content-between">
+            <!-- todays weather section -->
+            <section class="row d-flex justify-content-center">
+                <div class="col col-md-12 border mt-3">
+                    <h2>Atlanta (03/30/2021) weather icon here </h2>
+                    <p>Temp: 74 F</p>
+                    <p>Wind: 6 MPH</p>
+                    <p>Humidity: 46 %</p>
+                    <p>UV Index: blurb</p>
+                </div>
+            </section>
+
+            <!-- 5 day forecast section -->
+            <section class="row d-flex justify-content-center">
+                <div class="col col-md-12">
+                    <h4>5-Day Forecast:</h4>
+                </div>
+
+            </section>
+        </div>
+
     </section>
 
 
