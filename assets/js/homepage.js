@@ -55,7 +55,7 @@ var getCityWeather = function(data) {
     var cityLon = data.results[0].geometry.location.lng;  
 
     // might pass in lat and lon bases on variables from getLatLong function, also remember exclue exists
-    var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + cityLat + "&lon=" + cityLon + "&exclude={part}&appid=f41131e2a68abf0f2b5d80a0cda7823f";
+    var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + cityLat + "&lon=" + cityLon + "&exclude={part}&units=imperial&appid=f41131e2a68abf0f2b5d80a0cda7823f";
 
     fetch(apiUrl)
     .then(function(response) {
@@ -72,7 +72,19 @@ var getCityWeather = function(data) {
 var displayCityWeather = function(data) {
     var cityTemp = data.current.temp;
     var dayTempEl = document.getElementById("day-temp");
-    dayTempEl.textContent += cityTemp;
+    dayTempEl.textContent += cityTemp + " F";
+
+    var cityWind = data.current.wind_speed;
+    var dayWindEl = document.getElementById("day-wind");
+    dayWindEl.textContent += cityWind + " MPH";
+
+    var cityHumidity = data.current.humidity;
+    var dayHumidityEl = document.getElementById("day-humidity");
+    dayHumidityEl.textContent += cityHumidity + " percent";
+
+    var cityUv = data.current.uvi;
+    var dayUvEl = document.getElementById("day-uv");
+    dayUvEl.textContent += cityUv; 
 }
 
 
