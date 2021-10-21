@@ -31,7 +31,7 @@ var getLatLong = function(city) {
         if(response.ok) {
             console.log(response); // to see properties of the object and index of array
             response.json().then(function(data) {
-                getCityWeather(data);
+                getCityWeather(data, city);
             });
         } else {
             alert("Error: City Not Found.");
@@ -44,7 +44,7 @@ var getLatLong = function(city) {
 
 
 
-var getCityWeather = function(data) {
+var getCityWeather = function(data, city) {
     
     console.log(data); // see objects and properties to get lat and lon to pass into OpenWeather
     console.log(data.results[0].geometry.location.lat); // logs the lat of searched city
@@ -63,13 +63,19 @@ var getCityWeather = function(data) {
             console.log(response);
             response.json().then(function(data) {
                 console.log(data);
-                displayCityWeather(data);
+                displayCityWeather(data, city);
             })
         }
     })
 }
 
-var displayCityWeather = function(data) {
+var displayCityWeather = function(data, city) {
+    var cityName = city;
+    var cityNameEl = document.getElementById("city-name");
+    cityNameEl.textContent += cityName;
+
+
+
     var cityTemp = data.current.temp;
     var dayTempEl = document.getElementById("day-temp");
     dayTempEl.textContent += cityTemp + " F";
