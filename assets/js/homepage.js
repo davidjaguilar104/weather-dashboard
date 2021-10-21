@@ -32,7 +32,7 @@ var getLatLong = function(city) {
             console.log(response); // to see properties of the object and index of array
             response.json().then(function(data) {
                 console.log(data); // to see data in JSON format
-                // displayCityWeather(data, city); use this later for the OpenWeather function
+                getCityWeather(data, city);
             });
         } else {
             alert("Error: City Not Found.");
@@ -45,28 +45,16 @@ var getLatLong = function(city) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var getCityWeather = function(city) {
+var getCityWeather = function(data, city) {
     
+    var cityLat = data.city.lat; 
     
-    
+    var cityLon = data.city.lon;  
+
     // might pass in lat and lon bases on variables from getLatLong function, also remember exclue exists
-    var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid=f41131e2a68abf0f2b5d80a0cda7823f"
+    var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + cityLat + "&lon=" + cityLon + "&exclude={part}&appid=f41131e2a68abf0f2b5d80a0cda7823f";
+
+    fetch(apiUrl);
 }
 
 
