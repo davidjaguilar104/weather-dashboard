@@ -72,7 +72,15 @@ var getCityWeather = function(data, city) {
 var displayCityWeather = function(data, city) {
     var cityName = city;
     var cityNameEl = document.getElementById("city-name");
-    cityNameEl.textContent += cityName;
+    
+    var iconCode = data.current.weather[0].icon;
+    var iconUrl = "http://openweathermap.org/img/wn/" + iconCode + ".png";
+    
+
+
+
+
+    cityNameEl.textContent += cityName + " " + iconUrl; 
 
 
 
