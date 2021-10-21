@@ -70,7 +70,9 @@ var getCityWeather = function(data) {
 }
 
 var displayCityWeather = function(data) {
-
+    var cityTemp = data.current.temp;
+    var dayTempEl = document.getElementById("day-temp");
+    dayTempEl.textContent += cityTemp;
 }
 
 
