@@ -73,13 +73,16 @@ var displayCityWeather = function(data, city) {
     var cityName = city;
     var cityNameEl = document.getElementById("city-name");
     
-    var iconCode = data.current.weather[0].icon;
-    var iconUrl = "http://openweathermap.org/img/wn/" + iconCode + ".png";
-    
 
+    var iconCode = data.current.weather[0].icon;
+    console.log(iconCode);
+    var iconUrl = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";;
+    
+    iconEl = document.getElementById("weather-icon");
+    iconEl.setAttribute("src", iconUrl);
 
     const DATE = moment().format("(MM/D/YYYY)");
-    cityNameEl.textContent += cityName + " " + DATE + " " + iconUrl; 
+    cityNameEl.textContent += cityName + " " + DATE;
 
 
 
