@@ -120,17 +120,6 @@ var displayCityWeather = function(data, city) {
     var fiveDaysFromNow = moment().add(5, 'days').format("MM/D/YYYY");
     dayFiveEl.textContent = fiveDaysFromNow;
 
-
-    var fiveDayApiUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=f41131e2a68abf0f2b5d80a0cda7823f"
-    fetch(fiveDayApiUrl)
-    .then(function(response) {
-        if(response.ok) {
-            console.log(response);
-            response.json().then(function(data) {
-                console.log(data);
-            });
-        }
-    })
 }
 
 
