@@ -118,7 +118,15 @@ var displayCityWeather = function(data, city) {
     tempOne = data.daily[0].temp.day;
     tempForEl.textContent += " " + tempOne + " F";
 
+    var windForEl = document.getElementById("wind-for");
+    windOne = data.daily[0].wind_speed;
+    windForEl.textContent += " " + windOne + " MPH";
 
+    var humForEl = document.getElementById("hum-for");
+    humOne = data.daily[0].humidity;
+    humForEl.textContent += " " + humOne + " percent";
+
+    
     // day two forecast card
     var dayTwoEl = document.getElementById("day-two");
     var twoDaysFromNow = moment().add(2, 'days').format("MM/D/YYYY");
@@ -132,6 +140,14 @@ var displayCityWeather = function(data, city) {
     var tempForTwoEl = document.getElementById("temp-for-two");
     tempTwo = data.daily[1].temp.day;
     tempForTwoEl.textContent += " " + tempTwo + " F";
+
+    var windForTwoEl = document.getElementById("wind-for-two");
+    windTwo = data.daily[1].wind_speed;
+    windForTwoEl.textContent += " " + windTwo + " MPH";
+
+    var humForTwoEl = document.getElementById("hum-for-two");
+    humTwo = data.daily[1].humidity;
+    humForTwoEl.textContent += " " + humTwo + " percent";
 
 
     // day three forecast card
@@ -148,6 +164,14 @@ var displayCityWeather = function(data, city) {
     tempThree = data.daily[2].temp.day;
     tempForThreeEl.textContent += " " + tempThree + " F";
 
+    var windForThreeEl = document.getElementById("wind-for-three");
+    windThree = data.daily[2].wind_speed;
+    windForThreeEl.textContent += " " + windThree + " MPH";
+
+    var humForThreeEl = document.getElementById("hum-for-three");
+    humThree = data.daily[2].humidity;
+    humForThreeEl.textContent += " " + humThree + " percent";
+
     // day four forecast card
     var dayFourEl = document.getElementById("day-four");
     var fourDaysFromNow = moment().add(4, 'days').format("MM/D/YYYY");
@@ -161,6 +185,14 @@ var displayCityWeather = function(data, city) {
     var tempForFourEl = document.getElementById("temp-for-four");
     tempFour = data.daily[3].temp.day;
     tempForFourEl.textContent += " " + tempFour + " F";
+
+    var windForFourEl = document.getElementById("wind-for-four");
+    windFour = data.daily[3].wind_speed;
+    windForFourEl.textContent += " " + windFour + " MPH";
+
+    var humForFourEl = document.getElementById("hum-for-four");
+    humFour = data.daily[3].humidity;
+    humForFourEl.textContent += " " + humFour + " percent";
 
 
     // day five forecast card
@@ -176,6 +208,14 @@ var displayCityWeather = function(data, city) {
     var tempForFiveEl = document.getElementById("temp-for-five");
     tempFive = data.daily[4].temp.day;
     tempForFiveEl.textContent += " " + tempFive + " F";
+
+    var windForFiveEl = document.getElementById("wind-for-five");
+    windFive = data.daily[4].wind_speed;
+    windForFiveEl.textContent += " " + windFive + " MPH";
+
+    var humForFiveEl = document.getElementById("hum-for-five");
+    humFive = data.daily[4].humidity;
+    humForFiveEl.textContent += " " + humFive + " percent";
     
 }
 
