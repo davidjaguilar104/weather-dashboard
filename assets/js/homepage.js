@@ -123,6 +123,7 @@ var displayCityWeather = function(data, city) {
     var fiveDaysFromNow = moment().add(5, 'days').format("MM/D/YYYY");
     dayFiveEl.textContent = fiveDaysFromNow;
 
+    
 }
 
 
