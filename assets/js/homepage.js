@@ -82,12 +82,14 @@ var displayCityWeather = function(data, city) {
 
     const DATE = moment().format("(MM/D/YYYY)");
     cityNameEl.textContent += cityName + " " + DATE;
+    
 
 
 
     var cityTemp = data.current.temp;
     var dayTempEl = document.getElementById("day-temp");
     dayTempEl.textContent += cityTemp + " F";
+
 
     var cityWind = data.current.wind_speed;
     var dayWindEl = document.getElementById("day-wind");
@@ -101,6 +103,7 @@ var displayCityWeather = function(data, city) {
     var dayUvEl = document.getElementById("day-uv");
     dayUvEl.textContent += cityUv; 
 
+
     // day one forecast card
     var dayOneEl = document.getElementById("day-one");
     var dayFromNow = moment().add(1, 'days').format("MM/D/YYYY");
@@ -111,6 +114,9 @@ var displayCityWeather = function(data, city) {
     var iconOneUrl = "http://openweathermap.org/img/wn/" + iconCodeOne + "@2x.png";
     iconForEl.setAttribute("src", iconOneUrl);
 
+    var tempForEl = document.getElementById("temp-for");
+    tempOne = data.daily[0].temp.day;
+    tempForEl.textContent += " " + tempOne + " F";
 
 
     // day two forecast card
@@ -123,6 +129,10 @@ var displayCityWeather = function(data, city) {
     var iconTwoUrl = "http://openweathermap.org/img/wn/" + iconCodeTwo + "@2x.png";
     iconForTwoEl.setAttribute("src", iconTwoUrl);
 
+    var tempForTwoEl = document.getElementById("temp-for-two");
+    tempTwo = data.daily[1].temp.day;
+    tempForTwoEl.textContent += " " + tempTwo + " F";
+
 
     // day three forecast card
     var dayThreeEl = document.getElementById("day-three");
@@ -134,6 +144,9 @@ var displayCityWeather = function(data, city) {
     var iconThreeUrl = "http://openweathermap.org/img/wn/" + iconCodeThree + "@2x.png";
     iconForThreeEl.setAttribute("src", iconThreeUrl);
 
+    var tempForThreeEl = document.getElementById("temp-for-three");
+    tempThree = data.daily[2].temp.day;
+    tempForThreeEl.textContent += " " + tempThree + " F";
 
     // day four forecast card
     var dayFourEl = document.getElementById("day-four");
@@ -145,6 +158,10 @@ var displayCityWeather = function(data, city) {
     var iconFourUrl = "http://openweathermap.org/img/wn/" + iconCodeFour + "@2x.png";
     iconForFourEl.setAttribute("src", iconFourUrl);
 
+    var tempForFourEl = document.getElementById("temp-for-four");
+    tempFour = data.daily[3].temp.day;
+    tempForFourEl.textContent += " " + tempFour + " F";
+
 
     // day five forecast card
     var dayFiveEl = document.getElementById("day-five");
@@ -155,6 +172,10 @@ var displayCityWeather = function(data, city) {
     iconCodeFive = data.daily[4].weather[0].icon;
     var iconFiveUrl = "http://openweathermap.org/img/wn/" + iconCodeFive + "@2x.png";
     iconForFiveEl.setAttribute("src", iconFiveUrl);
+
+    var tempForFiveEl = document.getElementById("temp-for-five");
+    tempFive = data.daily[4].temp.day;
+    tempForFiveEl.textContent += " " + tempFive + " F";
     
 }
 
