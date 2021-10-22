@@ -75,8 +75,7 @@ var displayCityWeather = function(data, city) {
     
 
     var iconCode = data.current.weather[0].icon;
-    console.log(iconCode);
-    var iconUrl = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";;
+    var iconUrl = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
     
     iconEl = document.getElementById("weather-icon");
     iconEl.setAttribute("src", iconUrl);
@@ -102,23 +101,37 @@ var displayCityWeather = function(data, city) {
     var dayUvEl = document.getElementById("day-uv");
     dayUvEl.textContent += cityUv; 
 
-    
+    // day one forecast card
     var dayOneEl = document.getElementById("day-one");
     var dayFromNow = moment().add(1, 'days').format("MM/D/YYYY");
     dayOneEl.textContent = dayFromNow;
 
+    var iconForEl = document.getElementById("icon-forecast");
+    iconCodeOne = data.daily[0].weather[0].icon;
+    var iconOneUrl = "http://openweathermap.org/img/wn/" + iconCodeOne + "@2x.png";
+    iconForEl.setAttribute("src", iconOneUrl);
+
+
+
+    // day two forecast card
     var dayTwoEl = document.getElementById("day-two");
     var twoDaysFromNow = moment().add(2, 'days').format("MM/D/YYYY");
     dayTwoEl.textContent = twoDaysFromNow;
 
+
+    // day three forecast card
     var dayThreeEl = document.getElementById("day-three");
     var threeDaysFromNow = moment().add(3, 'days').format("MM/D/YYYY");
     dayThreeEl.textContent = threeDaysFromNow;
 
+
+    // day four forecast card
     var dayFourEl = document.getElementById("day-four");
     var fourDaysFromNow = moment().add(4, 'days').format("MM/D/YYYY");
     dayFourEl.textContent = fourDaysFromNow;
 
+
+    // day five forecast card
     var dayFiveEl = document.getElementById("day-five");
     var fiveDaysFromNow = moment().add(5, 'days').format("MM/D/YYYY");
     dayFiveEl.textContent = fiveDaysFromNow;
