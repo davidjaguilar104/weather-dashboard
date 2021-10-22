@@ -70,6 +70,7 @@ var getCityWeather = function(data, city) {
 }
 
 var displayCityWeather = function(data, city) {
+    
     var cityName = city;
     var cityNameEl = document.getElementById("city-name");
     
@@ -216,7 +217,7 @@ var displayCityWeather = function(data, city) {
     var humForFiveEl = document.getElementById("hum-for-five");
     humFive = data.daily[4].humidity;
     humForFiveEl.textContent += " " + humFive + " percent";
-    
+
 }
 
 
