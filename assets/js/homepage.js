@@ -72,15 +72,15 @@ var getCityWeather = function(data, city) {
 var displayCityWeather = function(data, city) {
 
 var saveCity = function() {
-    localStorage.setItem("cityName", JSON.stringify(city));
-    localStorage.setItem("cityDetails", JSON.stringify(data));
+    localStorage.setItem("city name", JSON.stringify(city));
+    localStorage.setItem("city details", JSON.stringify(data));
 
     var searchHistoryEl = document.getElementById("search-history");
     var cityButtonEl = document.createElement("button");
     cityButtonEl.setAttribute("class", "bg-secondary");
     cityButtonEl.textContent = city
 
-
+    
     searchHistoryEl.appendChild(cityButtonEl);
 
     cityButtonEl.addEventListener("click", function() {
