@@ -71,6 +71,17 @@ var getCityWeather = function(data, city) {
 
 var displayCityWeather = function(data, city) {
 
+var saveCity = function() {
+    localStorage.setItem("city", JSON.stringify(city));
+    
+    var searchHistoryEl = document.getElementById("search-history");
+    var cityButtonEl = document.createElement("button");
+    cityButtonEl.textContent = city
+
+    searchHistoryEl.appendChild(cityButtonEl);
+    
+}
+
 // main weather reset 
 var searchBtnEl = document.getElementById("search-btn");
     searchBtnEl.addEventListener("click", function() {
@@ -269,6 +280,7 @@ var searchBtnEl = document.getElementById("search-btn");
     humFive = data.daily[4].humidity;
     humForFiveEl.textContent += " " + humFive + " percent";
 
+    saveCity();
 }
 
 
