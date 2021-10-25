@@ -138,6 +138,21 @@ var searchBtnEl = document.getElementById("search-btn");
     var cityUv = data.current.uvi;
     var dayUvEl = document.getElementById("day-uv");
     dayUvEl.textContent += cityUv; 
+    if(cityUv <= 2) {
+        dayUvEl.setAttribute("class", "low-uv")
+    }
+    else if(cityUv >= 3 && cityUv <= 5) {
+        dayUvEl.setAttribute("class", "moderate-uv");
+    }
+    else if(cityUv >= 6 && cityUv <= 7) {
+        dayUvEl.setAttribute("class", "high-uv")
+    }
+    else if(cityUv >= 8 && cityUv <= 10) {
+        dayUvEl.setAttribute("class", "very-high-uv")
+    }
+    else if(cityUv >= 11) {
+        dayUvEl.setAttribute("class", "extreme-uv")
+    }
 
 
     // day one forecast card
