@@ -113,6 +113,8 @@ var saveCity = function() {
     humForFiveEl.textContent = "Humidity: ";
 
        displayCityWeather(data, city);
+
+    cityButtonEl.remove();
     });
     
 };
