@@ -1,1 +1,1 @@
-- need to save city to local storage
+- need to save search history elements to local storage 
