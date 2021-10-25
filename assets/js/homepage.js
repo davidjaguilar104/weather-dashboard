@@ -77,8 +77,9 @@ var saveCity = function() {
 
     var searchHistoryEl = document.getElementById("search-history");
     var cityButtonEl = document.createElement("button");
-    cityButtonEl.setAttribute("class", "city-btn");
+    cityButtonEl.setAttribute("class", "bg-secondary");
     cityButtonEl.textContent = city
+
 
     searchHistoryEl.appendChild(cityButtonEl);
 
@@ -112,7 +113,7 @@ var saveCity = function() {
     windForFiveEl.textContent = "Wind: ";
     humForFiveEl.textContent = "Humidity: ";
 
-       displayCityWeather(data, city);
+    displayCityWeather(data, city);
 
     cityButtonEl.remove();
     });
