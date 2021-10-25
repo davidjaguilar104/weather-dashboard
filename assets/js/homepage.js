@@ -81,7 +81,7 @@ var searchBtnEl = document.getElementById("search-btn");
         dayUvEl.textContent = "UV Index: "
     });
 
-// card one reset
+// cards reset
     var searchBtnEl = document.getElementById("search-btn");
     searchBtnEl.addEventListener("click", function() {
         tempForEl.textContent = "Temp: ";
