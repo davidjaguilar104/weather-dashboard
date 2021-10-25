@@ -77,7 +77,7 @@ var saveCity = function() {
 
     var searchHistoryEl = document.getElementById("search-history");
     var cityButtonEl = document.createElement("button");
-    cityButtonEl.setAttribute("id", "city-btn");
+    cityButtonEl.setAttribute("class", "city-btn");
     cityButtonEl.textContent = city
 
     searchHistoryEl.appendChild(cityButtonEl);
