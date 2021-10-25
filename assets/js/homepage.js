@@ -72,8 +72,9 @@ var getCityWeather = function(data, city) {
 var displayCityWeather = function(data, city) {
 
 var saveCity = function() {
-    localStorage.setItem("city", JSON.stringify(city));
-    
+    localStorage.setItem("cityName", JSON.stringify(city));
+    localStorage.setItem("cityDetails", JSON.stringify(data));
+
     var searchHistoryEl = document.getElementById("search-history");
     var cityButtonEl = document.createElement("button");
     cityButtonEl.setAttribute("id", "city-btn");
