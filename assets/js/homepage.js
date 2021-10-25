@@ -70,6 +70,28 @@ var getCityWeather = function(data, city) {
 }
 
 var displayCityWeather = function(data, city) {
+
+// main weather reset 
+var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        cityNameEl.textContent = "";
+        dayTempEl.textContent = "Temp: "
+        dayWindEl.textContent = "Wind: "
+        dayHumidityEl.textContent = "Humidity: "
+        dayUvEl.textContent = "UV Index: "
+    });
+
+    var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        windForThreeEl.textContent = "Wind: ";
+    });
+
+
+    var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        humForThreeEl.textContent = "Humidity: ";
+    });
+
 // card one reset
     var searchBtnEl = document.getElementById("search-btn");
     searchBtnEl.addEventListener("click", function() {
