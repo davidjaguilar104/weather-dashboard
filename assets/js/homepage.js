@@ -76,24 +76,19 @@ var saveCity = function() {
     
     var searchHistoryEl = document.getElementById("search-history");
     var cityButtonEl = document.createElement("button");
+    cityButtonEl.setAttribute("id", "city-btn");
     cityButtonEl.textContent = city
 
     searchHistoryEl.appendChild(cityButtonEl);
 
     cityButtonEl.addEventListener("click", function() {
-        // main weather reset 
-var searchBtnEl = document.getElementById("search-btn");
-searchBtnEl.addEventListener("click", function() {
     cityNameEl.textContent = "";
     dayTempEl.textContent = "Temp: "
     dayWindEl.textContent = "Wind: "
     dayHumidityEl.textContent = "Humidity: "
     dayUvEl.textContent = "UV Index: "
-});
 
-// cards reset
-var searchBtnEl = document.getElementById("search-btn");
-searchBtnEl.addEventListener("click", function() {
+
     tempForEl.textContent = "Temp: ";
     windForEl.textContent = "Wind: ";
     humForEl.textContent = "Humidity: ";
@@ -113,12 +108,11 @@ searchBtnEl.addEventListener("click", function() {
     tempForFiveEl.textContent = "Temp: ";
     windForFiveEl.textContent = "Wind: ";
     humForFiveEl.textContent = "Humidity: ";
-});
 
        displayCityWeather(data, city);
-    })
+    });
     
-}
+};
 
 // main weather reset 
 var searchBtnEl = document.getElementById("search-btn");
