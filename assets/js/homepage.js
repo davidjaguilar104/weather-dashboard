@@ -70,7 +70,90 @@ var getCityWeather = function(data, city) {
 }
 
 var displayCityWeather = function(data, city) {
+// card one reset
+    var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        tempForEl.textContent = "Temp: ";
+    });
+
+    var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        windForEl.textContent = "Wind: ";
+    });
+
+    var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        humForEl.textContent = "Humidity: ";
+    });
     
+// card two reset
+    var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        tempForTwoEl.textContent = "Temp: ";
+    });
+
+    var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        windForTwoEl.textContent = "Wind: ";
+    });
+
+
+    var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        humForTwoEl.textContent = "Humidity: ";
+    });
+
+// card three reset
+    var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        tempForThreeEl.textContent = "Temp: ";
+    });
+
+    var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        windForThreeEl.textContent = "Wind: ";
+    });
+
+
+    var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        humForThreeEl.textContent = "Humidity: ";
+    });
+
+// card four reset
+    var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        tempForFourEl.textContent = "Temp: ";
+    });
+
+    var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        windForFourEl.textContent = "Wind: ";
+    });
+
+
+    var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        humForFourEl.textContent = "Humidity: ";
+    });
+
+// card five reset
+    var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        tempForFiveEl.textContent = "Temp: ";
+    });
+
+    var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        windForFiveEl.textContent = "Wind: ";
+    });
+
+
+    var searchBtnEl = document.getElementById("search-btn");
+    searchBtnEl.addEventListener("click", function() {
+        humForFiveEl.textContent = "Humidity: ";
+    });
+
     var cityName = city;
     var cityNameEl = document.getElementById("city-name");
     
@@ -118,6 +201,7 @@ var displayCityWeather = function(data, city) {
     var tempForEl = document.getElementById("temp-for");
     tempOne = data.daily[0].temp.day;
     tempForEl.textContent += " " + tempOne + " F";
+    
 
     var windForEl = document.getElementById("wind-for");
     windOne = data.daily[0].wind_speed;
