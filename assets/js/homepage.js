@@ -138,16 +138,16 @@ var searchBtnEl = document.getElementById("search-btn");
     var cityUv = data.current.uvi;
     var dayUvEl = document.getElementById("day-uv");
     dayUvEl.textContent += cityUv; 
-    if(cityUv <= 2) {
+    if(cityUv <= 2.99) {
         dayUvEl.setAttribute("class", "low-uv")
     }
-    else if(cityUv >= 3 && cityUv <= 5) {
+    else if(cityUv >= 3 && cityUv <= 5.99) {
         dayUvEl.setAttribute("class", "moderate-uv");
     }
-    else if(cityUv >= 6 && cityUv <= 7) {
+    else if(cityUv >= 6 && cityUv <= 7.99) {
         dayUvEl.setAttribute("class", "high-uv")
     }
-    else if(cityUv >= 8 && cityUv <= 10) {
+    else if(cityUv >= 8 && cityUv <= 10.99) {
         dayUvEl.setAttribute("class", "very-high-uv")
     }
     else if(cityUv >= 11) {
