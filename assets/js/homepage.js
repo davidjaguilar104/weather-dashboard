@@ -82,13 +82,15 @@ var saveCity = function() {
     searchHistoryEl.appendChild(cityButtonEl);
 
     cityButtonEl.addEventListener("click", function() {
+    
+    // reset day weather
     cityNameEl.textContent = "";
     dayTempEl.textContent = "Temp: "
     dayWindEl.textContent = "Wind: "
     dayHumidityEl.textContent = "Humidity: "
     dayUvEl.textContent = "UV Index: "
 
-
+// reset forecast weather
     tempForEl.textContent = "Temp: ";
     windForEl.textContent = "Wind: ";
     humForEl.textContent = "Humidity: ";
