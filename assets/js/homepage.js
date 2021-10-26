@@ -85,7 +85,7 @@ var saveCity = function() {
 
     cityButtonEl.addEventListener("click", function() {
     
-    // reset day weather
+// reset day weather
     cityNameEl.textContent = "";
     dayTempEl.textContent = "Temp: "
     dayWindEl.textContent = "Wind: "
