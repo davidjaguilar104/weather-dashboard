@@ -120,7 +120,7 @@ var saveCity = function() {
     
 };
 
-// main weather reset 
+// reset day weather 
 var searchBtnEl = document.getElementById("search-btn");
     searchBtnEl.addEventListener("click", function() {
         cityNameEl.textContent = "";
@@ -128,11 +128,8 @@ var searchBtnEl = document.getElementById("search-btn");
         dayWindEl.textContent = "Wind: "
         dayHumidityEl.textContent = "Humidity: "
         dayUvEl.textContent = "UV Index: "
-    });
 
-// cards reset
-    var searchBtnEl = document.getElementById("search-btn");
-    searchBtnEl.addEventListener("click", function() {
+// reset forecast weather
         tempForEl.textContent = "Temp: ";
         windForEl.textContent = "Wind: ";
         humForEl.textContent = "Humidity: ";
@@ -153,6 +150,9 @@ var searchBtnEl = document.getElementById("search-btn");
         windForFiveEl.textContent = "Wind: ";
         humForFiveEl.textContent = "Humidity: ";
     });
+
+// cards reset
+   
 
 
     var cityName = city;
