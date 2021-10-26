@@ -1,1 +1,0 @@
-- need to save search history elements to local storage 
