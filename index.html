@@ -12,7 +12,7 @@
     
     <!-- header -->
     <header class="row d-flex">
-        <div class="col-md-12 text-center bg-primary">
+        <div class="col col-12 col-md-12 text-center bg-primary">
             <h1 class="text-white">Weather Dashboard</h1>
         </div>
     </header>
@@ -21,7 +21,7 @@
 <!-- search for city and history main content -->
     <section class="row d-flex justify-content-between">
         <!-- search for a city column -->
-        <div class="col col-md-3 d-flex flex-column">
+        <div class="col col-12 col-md-3 d-flex flex-column">
             <form id="user-form">
                 <label for="city"><h2>Search for a City:</h2></label>
                 <br />
@@ -38,10 +38,10 @@
 
 
         <!-- column holding two rows (weather and forecast) -->
-        <div class="col col-md-9 d-flex flex-column justify-content-between" id="weather-container">
+        <div class="col col-12 col-md-9 d-flex flex-column justify-content-between" id="weather-container">
             <!-- todays weather section -->
             <section class="row d-flex justify-content-center">
-                <div class="col col-md-12 border mt-3  bg-secondary">
+                <div class="col col-12 col-md-12 border mt-3  bg-secondary">
                     <h2 id="city-name"></h2>
                     <img id="weather-icon" alt="weather icon" />
                     <p id="day-temp">Temp: </p>
@@ -53,11 +53,11 @@
 
             <!-- 5 day forecast section -->
             <section class="row d-flex">
-                <div class="col col-md-12">
+                <div class="col col-12 col-md-12">
                     <h4>5-Day Forecast:</h4>
                 </div>
 
-                <div class="card"> 
+                <div class="card col-6"> 
                     <div class="card-body bg-primary">
                         <h5 id="day-one" class="card-title"></h5>
                         <img id="icon-forecast" alt="weather icon" />
@@ -66,7 +66,7 @@
                         <p class="card-text" id="hum-for">Humidity:</p>
                     </div>
                 </div>
-                <div class="card"> 
+                <div class="card col-6"> 
                     <div class="card-body bg-secondary">
                         <h5 id="day-two" class="card-title"></h5>
                         <img id="icon-forecast-two" alt="weather icon" />
@@ -75,7 +75,7 @@
                         <p class="card-text" id="hum-for-two">Humidity:</p>
                     </div>
                 </div>
-                <div class="card"> 
+                <div class="card col-6"> 
                     <div class="card-body bg-primary">
                         <h5 id="day-three" class="card-title"></h5>
                         <img id="icon-forecast-three" alt="weather icon" />
@@ -84,7 +84,7 @@
                         <p class="card-text" id="hum-for-three">Humidity:</p>
                     </div>
                 </div>
-                <div class="card"> 
+                <div class="card col-6"> 
                     <div class="card-body bg-secondary">
                         <h5 id="day-four" class="card-title"></h5>
                         <img id="icon-forecast-four" alt="weather icon" />
@@ -93,7 +93,7 @@
                         <p class="card-text" id="hum-for-four">Humidity:</p>
                     </div>
                 </div>
-                <div class="card"> 
+                <div class="card col-12"> 
                     <div class="card-body bg-primary">
                         <h5 id="day-five" class="card-title"></h5>
                         <img id="icon-forecast-five" alt="weather icon" />
